@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="card-row" >
+    <div class="card-header" style="background-color: rgb(255, 255, 255);"><h1 id="head">{{ title }}</h1></div>
+      <div class="card-body">
+      <!--  <input class="form-control" type="text" name="task" id="task">
+        <button class="btn btn-outline-primary my-3" type="submit">Add task</button>
+        -->
+        <app-task-form [taskList]="taskList"></app-task-form>
+      </div>
+      <div class="card-body">
+        <h2 *ngIf="taskList.length">My Current Tasks ({{ taskList.length }})</h2>
+        <h2 *ngIf="!taskList.length">No tasks in the list</h2>
+        <!--<ul>
+          <li class="d-flex" *ngFor="let task of taskList;let i = index">
+            {{task}} <button class="btn btn-danger">Delete</button>
+          </li>
+        </ul>
+      -->
+      <app-task-list [tasks]="taskList"></app-task-list>
+      </div>
+  </div>
+</div>

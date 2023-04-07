@@ -1,0 +1,16 @@
+<form action="">
+        <input placeholder="Add a new task" class="form-control" type="text" name="newTask" id="newTask" [(ngModel)]="newTask">
+        <button class="btn btn-primary my-3" type="submit" onclick="valid()" (click)="addTodo()">
+                Add task</button>
+</form>
+        
+<script>
+        function valid(){
+                var s = document.getElementById("newTask").value;
+                if(s == "")
+                {
+                        alert("Tasks cannot be empty");
+                }
+        }
+
+</script>
